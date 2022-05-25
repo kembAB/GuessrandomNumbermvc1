@@ -1,0 +1,22 @@
+﻿@page
+
+@model MVCBasicsGussingGameAssignment3Try3.Model.GuessRandomNumber
+
+@{
+    ViewData["Title"] = "GuessRandomNumber";
+}
+
+<h1>GuessingGame</h1>
+
+@if (ViewBag.Message != null)
+{
+    
+    <p>@Html.Raw(@ViewBag.Message) </p>
+}
+<form asp-controller="Home" asp-action="Index" method="post">
+    <label>Guess randomly gennerate  number:</label>
+    <input type="number" name="hiNumber" title="guessing number">
+
+    <input type="submit" value="Check" />
+</form>
+
